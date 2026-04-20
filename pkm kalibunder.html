@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Visum Digi</title>
+    <style>
+        /* Menghilangkan margin default browser */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Mencegah scroll ganda */
+            background-color: #f4f7f6;
+        }
+
+        /* Container utama agar iframe memenuhi layar */
+        .app-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+            flex-grow: 1;
+        }
+
+        /* Loading indicator sederhana sebelum aplikasi dimuat */
+        .loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Arial, sans-serif;
+            color: #555;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loading-text">Memuat Aplikasi...</div>
+
+    <div class="app-container">
+        <iframe 
+            src="https://script.google.com/macros/s/AKfycbxKD2Kz-MPNvgKG9pKtXOGNNSRI7r_Eg9DjjDX1y63e8QCnaG2EqgSwXvhQmgLj9qMM/exec" 
+            allow="geolocation; camera; microphone; fullscreen; self"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</body>
+</html>
